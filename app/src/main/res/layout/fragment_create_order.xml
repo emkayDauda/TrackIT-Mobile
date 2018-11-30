@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:fillViewport="true"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/idLayout"
+                app:layout_constraintTop_toBottomOf="@+id/guideline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Order Id"
+                    android:id="@+id/orderId"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:indeterminate="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/nameLayout"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/idLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Package Name"
+                    android:id="@+id/productName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="19dp"
+                app:layout_constraintTop_toBottomOf="@+id/nameLayout"
+                android:id="@+id/driverLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="QTY (boxes)"
+                    android:id="@+id/driverId"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <AutoCompleteTextView
+                android:layout_width="0dp"
+                android:hint="Source"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/sourceTextView"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/driverLayout"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"/>
+
+        <AutoCompleteTextView
+                android:layout_width="0dp"
+                android:inputType="textPersonName"
+                android:hint="Destination"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/destinationTextView"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/sourceTextView"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"/>
+
+        <Button
+                android:text="Create Order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/createOrder"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:background="@drawable/instantaneous_parameter_background"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/destinationTextView"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.20138943"/>
+        
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/idLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Driver Id"
+                    android:id="@+id/qty"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

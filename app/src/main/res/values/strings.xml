@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tracker</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">TrackIT</string>
+    <string name="nav_header_subtitle">Team Egress</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_motto">app_motto</string>
+    <string name="helpTeam">Help Team</string>
+    <string name="drug">Drugs</string>
+    <string name="vaccine">Vaccines</string>
+    <string name="title_activity_accept_package">AcceptPackage</string>
+    <string name="title_activity_report_outbreak">ReportOutbreak</string>
+    <string name="equipment">Equipment</string>
+</resources>
